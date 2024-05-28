@@ -1,0 +1,40 @@
+.container{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)) ,url('https://images6.alphacoders.com/577/577827.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.container h1{
+    color: #6bd3d3;
+    font-size: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    /* width:100%; */
+    border-radius: 16px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+.buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 10px;
+    gap: 6px;
+}
+.buttons a{
+    padding: 5px 7px;
+    background-color: #6bd3d3;
+    text-decoration: none;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.buttons a:hover{
+    background-color: rgb(192, 192, 22);
+}

@@ -1,14 +1,16 @@
 <?php
-/*session_start();
-if (!isset($_SESSION['admin_logged_in'])) {
-    header('Location: admin-login.php');
-    exit;
-}*/
-
-include 'connect.php';
-
-$sql = "SELECT * FROM visitors";
-$result = $conn->query($sql);
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the submitted credentials match the default admin credentials
+    if ($_POST["username"] === "saket" && $_POST["password"] === "12345") {
+        // Redirect to the admin dashboard or perform other admin-specific actions
+        header("Location: admin_dashboard.php");
+        exit;
+    } else {
+        // Incorrect credentials, display an error message
+        $error_message = "Invalid username or password.";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,38 +19,26 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Accommodation Bookings</title>
-    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <title>Login - Admin Dashboard</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <h1>Admin Dashboard - Accommodation Bookings</h1>
-    <table>
-        <tr>
-            <th>Username</th>
-            <th>email</th>
-            <th>phone</th>
-            <th>entry_time</th>
-            <th>exit_time</th>
-
-        </tr>
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>
-                        <td>" . $row["username"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td>" . $row["phone"] . "</td>
-                        <td>" . $row["entry_time"] . "</td>
-                        <td>" . $row["exit_time"] . "</td>
-                      </tr>";
-            }
-        } else {
-            echo "<tr><td colspan='4'>No bookings found.</td></tr>";
-        }
-        ?>
-    </table>
-    <a class="btn" href="logout.php">Logout</a>
+    <div class="container">
+    <h1>Login - Admin Dashboard</h1>
+    <?php if (isset($error_message)): ?>
+        <p style="color: red;"><?php echo $error_message; ?></p>
+    <?php endif; ?>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="form-group">
+            <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+    </form>
+    </div>
 </body>
 
 </html>

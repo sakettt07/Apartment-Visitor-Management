@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url("https://i.redd.it/p747q32sz8va1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 9rem;
+    margin-left: 25rem;
+    backdrop-filter: blur(6px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+h1 {
+    color: #000000;
+}
+p {
+    font-size: 1.2em;
+    color: #6c757d;
+}
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #c9302c;
+}

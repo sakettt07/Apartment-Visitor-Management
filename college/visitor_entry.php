@@ -8,7 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO visitors (username, phone, email) VALUES ('$username', '$phone', '$email')";
     if (mysqli_query($conn, $query)) {
-        $message = "Visitor entry recorded successfully.";
+        $message = "Visitor entry recorded successfully.✅";
+        header("Location: home.php");
+        exit();
     } else {
         $message = "Error: " . mysqli_error($conn);
     }

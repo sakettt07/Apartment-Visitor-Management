@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apartment Visitor Management</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
     <div class="container">

@@ -2,25 +2,33 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-    background-color: #f8f9fa;
+    background-color: #b8cfe6;
 }
+
 .container {
-    max-width: 600px;
-    /* margin: auto; */
+    max-width: 400px;
+    margin: auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 9rem;
-    margin-left: 25rem;
 }
+
 h1 {
     color: #d9534f;
 }
-p {
-    font-size: 1.2em;
-    color: #6c757d;
+
+.form-group {
+    margin-bottom: 15px;
 }
+
+.form-group input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    font-size: 1em;
+}
+
 .btn {
     display: inline-block;
     margin: 10px;
@@ -33,6 +41,17 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+.yoo{
+    color: green;
+    font-weight: 700;
+    font-family: Helvetica, sans-serif;
+}
+
 .btn:hover {
     background-color: #c9302c;
+}
+
+.error {
+    color: #d9534f;
+    font-size: 0.9em;
 }
